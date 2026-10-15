@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#b83b31" />
+    <meta name="description" content="英语红宝书教师每日知识测试" />
+    <title>英语红宝书｜教师每日知识测试</title>
+    <link rel="stylesheet" href="assets/styles.css?v=20261015-6" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="index.html" aria-label="返回考试首页">
+          <span class="brand-mark">英</span>
+          <span>
+            <strong>英语红宝书</strong>
+            <small>教师知识测试</small>
+          </span>
+        </a>
+        <nav class="header-actions" aria-label="网站导航">
+          <a class="header-link" href="book.html">学习资料</a>
+          <span class="date-chip" id="todayLabel">每日更新</span>
+        </nav>
+      </header>
+
+      <main>
+        <section class="screen welcome-screen" id="welcomeScreen">
+          <div class="hero-copy">
+            <span class="eyebrow">TEACHER DAILY QUIZ</span>
+            <h1>每天一套题，<br /><em>把方法真正讲清楚。</em></h1>
+            <p>输入姓名即可开始。系统会按照老师姓名和当天日期，从116题题库中生成专属试卷。</p>
+          </div>
+
+          <div class="feature-row" aria-label="考试规则">
+            <div><strong>20</strong><span>道单选题</span></div>
+            <div><strong>5</strong><span>分 / 题</span></div>
+            <div><strong>80</strong><span>分合格</span></div>
+          </div>
+
+          <form class="start-card" id="startForm">
+            <label for="teacherName">老师姓名</label>
+            <div class="name-input-wrap">
+              <input id="teacherName" name="teacherName" type="text" maxlength="30" autocomplete="name" placeholder="请输入真实姓名" required />
+              <button class="primary-button" type="submit">开始今日测试</button>
+            </div>
+            <div class="study-links" aria-label="红宝书学习入口">
+              <a class="study-link" href="book.html">
+                <span>完整学习</span>
+                <small>阅读完整红宝书 →</small>
+              </a>
+              <a class="study-link" href="questions.html">
+                <span>116个提问</span>
+                <small>专项查看问答内容 →</small>
+              </a>
+            </div>
+            <p class="form-note">同一位老师当天再次进入时，题目保持一致；第二天自动更新。</p>
+            <p class="error-message" id="nameError" role="alert"></p>
+          </form>
+        </section>
+
+        <section class="screen exam-screen hidden" id="examScreen" aria-live="polite">
+          <div class="exam-topbar">
+            <div>
+              <span class="muted">今日考生</span>
+              <strong id="examTeacher"></strong>
+            </div>
+            <div class="progress-copy"><span id="answeredCount">0</span>/20 已作答</div>
+          </div>
+          <div class="progress-track" aria-hidden="true"><span id="progressBar"></span></div>
+
+          <article class="question-card" id="questionCard">
+            <div class="question-meta">
+              <span id="questionNumber">第 1 题</span>
+              <span>单选题 · 5分</span>
+            </div>
+            <h2 id="questionText"></h2>
+            <div class="option-list" id="optionList" role="radiogroup" aria-label="请选择一个答案"></div>
+          </article>
+
+          <div class="exam-actions">
+            <button class="secondary-button" id="prevButton" type="button">上一题</button>
+            <div class="question-dots" id="questionDots" aria-label="题目导航"></div>
+            <button class="primary-button" id="nextButton" type="button">下一题</button>
+          </div>
+        </section>
+
+        <section class="screen result-screen hidden" id="resultScreen" aria-live="polite">
+          <div class="result-card">
+            <span class="eyebrow">TODAY'S RESULT</span>
+            <div class="score-ring" id="scoreRing">
+              <strong id="resultScore">0</strong><span>分</span>
+            </div>
+            <h1 id="resultTitle"></h1>
+            <p id="resultSummary"></p>
+            <div class="result-stats">
+              <div><span>答对</span><strong id="correctCount">0题</strong></div>
+              <div><span>用时</span><strong id="durationLabel">0分钟</strong></div>
+              <div><span>结果</span><strong id="passLabel">—</strong></div>
+            </div>
+            <p class="sync-notice" id="syncNotice"></p>
+            <div class="result-actions">
+              <button class="primary-button" id="reviewButton" type="button">查看错题解析</button>
+              <button class="secondary-button" id="homeButton" type="button">返回首页</button>
+            </div>
+          </div>
+
+          <div class="review-panel hidden" id="reviewPanel">
+            <div class="section-heading">
+              <div><span class="eyebrow">REVIEW</span><h2>错题解析</h2></div>
+              <span class="muted" id="wrongCount"></span>
+            </div>
+            <div id="reviewList"></div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <span>英语红宝书教师知识测试</span>
+        <div><a href="book.html">完整学习</a><a href="questions.html">116个提问</a></div>
+      </footer>
+    </div>
+
+    <script src="config.js?v=20261015"></script>
+    <script src="assets/questions.js?v=20261015-4"></script>
+    <script src="assets/engine.js?v=20261015-4"></script>
+    <script src="assets/storage.js?v=20261015"></script>
+    <script src="assets/app.js?v=20261015"></script>
+  </body>
+</html>

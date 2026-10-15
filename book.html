@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#b83b31" />
+    <meta name="description" content="在线阅读英语启蒙红宝书完整PDF" />
+    <title>学习资料｜英语红宝书</title>
+    <link rel="stylesheet" href="assets/styles.css?v=20261015-6" />
+  </head>
+  <body class="reader-body">
+    <div class="page-shell reader-shell">
+      <header class="site-header">
+        <a class="brand" href="index.html" aria-label="返回考试首页">
+          <span class="brand-mark">英</span>
+          <span><strong>英语红宝书</strong><small>教师学习资料</small></span>
+        </a>
+        <nav class="header-actions" aria-label="网站导航">
+          <a class="header-link" href="questions.html">116个提问</a>
+          <a class="header-link" href="index.html">每日测试</a>
+        </nav>
+      </header>
+
+      <main class="reader-main">
+        <div class="reader-heading">
+          <div>
+            <span class="eyebrow">FULL HANDBOOK</span>
+            <h1>英语启蒙红宝书</h1>
+            <p>完整86页PDF。老师可以在这里阅读全部内容，也可以在新窗口打开。</p>
+          </div>
+          <div class="reader-actions">
+            <a class="primary-button button-link" href="resources/英语红宝书.pdf" target="_blank" rel="noopener">新窗口打开PDF</a>
+            <a class="secondary-button button-link" href="resources/英语红宝书.pdf" download>下载PDF</a>
+          </div>
+        </div>
+
+        <div class="reader-tip">
+          <strong>阅读提示</strong>
+          <span>电脑端可直接翻页；手机端如果内嵌区域不能完整翻页，请点击“新窗口打开PDF”。</span>
+        </div>
+
+        <section class="pdf-reader" aria-label="英语红宝书在线阅读区">
+          <div class="reader-toolbar">
+            <button class="secondary-button compact-button" id="previousPage" type="button">上一页</button>
+            <label>第 <input id="pageInput" type="number" min="1" max="86" value="1" inputmode="numeric" /> / 86 页</label>
+            <button class="secondary-button compact-button" id="nextPage" type="button">下一页</button>
+          </div>
+          <div class="pdf-pages" id="pdfPages"></div>
+          <noscript><p>浏览器未启用脚本，请<a href="resources/英语红宝书.pdf">直接打开PDF</a>。</p></noscript>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <span>英语红宝书教师学习资料</span>
+        <div><a href="questions.html">116个提问</a><a href="index.html">每日测试</a></div>
+      </footer>
+    </div>
+    <script src="assets/book.js?v=20261015"></script>
+  </body>
+</html>
